@@ -467,6 +467,7 @@
       <div class="card reveal">
         <h3 data-i18n="bring.title">What to bring</h3>
         <ul class="bring">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg><span data-i18n="b.water">Your own water bottle</span></li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-shoe"/></svg><span data-i18n="b.shoes">Comfortable shoes</span></li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span data-i18n="b.hat">Hat and sunscreen</span></li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-rosary"/></svg><span data-i18n="b.rosary">Your rosary</span></li>
@@ -656,9 +657,9 @@ en:{
  "ok.mail":"Almost done! Your email app opened with your message ready. Please press send.",
  "mail.subject.rsvp":"RSVP – 5th Pilgrimage of Christ the King","mail.subject.ride":"Ride request – 5th Pilgrimage","mail.subject.drive":"Driver offer – 5th Pilgrimage",
  "provide.eyebrow":"What we provide","provide.title":"We'll take care of you","provide.cardTitle":"Our team takes care of",
- "provide.note":"Water, snacks, permits and open restrooms. Pilgrims do not need to bring extra water.",
+ "provide.note":"Water, snacks, permits and open restrooms.",
  "p.water":"Water","p.snacks":"Snacks","p.permits":"Permits","p.restrooms":"Open restrooms",
- "bring.title":"What to bring","b.shoes":"Comfortable shoes","b.hat":"Hat and sunscreen","b.rosary":"Your rosary","b.spirit":"A positive spirit",
+ "bring.title":"What to bring","b.water":"Your own water bottle","b.shoes":"Comfortable shoes","b.hat":"Hat and sunscreen","b.rosary":"Your rosary","b.spirit":"A positive spirit",
  "print.eyebrow":"Printed materials","print.title":"Take it with you","print.lead":"Print a clean one-page handout with the date, times, route, how to get there and contact, or download the PDF.",
  "btn.print":"Print this page","btn.printBoth":"Print both languages",
  "rsvp.eyebrow":"RSVP","rsvp.title":"Please RSVP","rsvp.lead":"Let us know you are coming so we can plan for everyone.","rsvp.send":"Send RSVP",
@@ -703,9 +704,9 @@ es:{
  "ok.mail":"¡Casi listo! Se abrió su correo con el mensaje preparado. Por favor presione enviar.",
  "mail.subject.rsvp":"Confirmación – 5ta Peregrinación de Cristo Rey","mail.subject.ride":"Solicitud de transporte – 5ta Peregrinación","mail.subject.drive":"Oferta de transporte – 5ta Peregrinación",
  "provide.eyebrow":"Lo que ofrecemos","provide.title":"Nosotros nos encargamos","provide.cardTitle":"Nuestro equipo se encarga de",
- "provide.note":"Agua, bocadillos, permisos y baños abiertos. Los peregrinos no necesitan traer más agua.",
+ "provide.note":"Agua, bocadillos, permisos y baños abiertos.",
  "p.water":"Agua","p.snacks":"Bocadillos","p.permits":"Permisos","p.restrooms":"Baños abiertos",
- "bring.title":"Qué traer","b.shoes":"Zapatos cómodos","b.hat":"Sombrero y protector solar","b.rosary":"Su rosario","b.spirit":"Buen ánimo y un corazón alegre",
+ "bring.title":"Qué traer","b.water":"Su botella de agua","b.shoes":"Zapatos cómodos","b.hat":"Sombrero y protector solar","b.rosary":"Su rosario","b.spirit":"Buen ánimo y un corazón alegre",
  "print.eyebrow":"Materiales impresos","print.title":"Llévelo consigo","print.lead":"Imprima una hoja con la fecha, los horarios, la ruta, cómo llegar y el contacto, o descargue el PDF.",
  "btn.print":"Imprimir esta página","btn.printBoth":"Imprimir en ambos idiomas",
  "rsvp.eyebrow":"Confirmar asistencia","rsvp.title":"Por favor confirme su asistencia","rsvp.lead":"Avísenos que viene para poder preparar todo para cada persona.","rsvp.send":"Enviar confirmación",
@@ -948,7 +949,7 @@ function sheetsHTML(mode){
       <h2>${t('ps.route')}</h2><ol>${route}</ol>
       <h2>${t('ps.getting')}</h2><ol><li><strong>${t('step1.t')}.</strong> ${t('step1.d')}</li><li><strong>${t('step2.t')}.</strong> ${t('step2.d')}</li><li><strong>${t('step3.t')}</strong> ${t('step3.d')}</li></ol>
       <h2>${t('ps.provide')}</h2><p>${t('provide.note')}</p>
-      <h2>${t('ps.bring')}</h2><ul><li>${t('b.shoes')}</li><li>${t('b.hat')}</li><li>${t('b.rosary')}</li><li>${t('b.spirit')}</li></ul>
+      <h2>${t('ps.bring')}</h2><ul><li>${t('b.water')}</li><li>${t('b.shoes')}</li><li>${t('b.hat')}</li><li>${t('b.rosary')}</li><li>${t('b.spirit')}</li></ul>
       <h2>${t('ps.contact')}</h2>
       <p><strong>${t('ps.rsvp')}</strong><br>${esc(CONFIG.contact.name)} · ${esc(CONFIG.contact.phoneDisplay)} · ${esc(CONFIG.contact.email)}<br>${t('ps.page')}: ${esc(url)}</p>
       <p class="ps-foot">${t('motto')}<br>${t('footer.org')}</p></article>`;
