@@ -100,6 +100,11 @@
 #pcr26 .cd span{font-size:.95rem;color:var(--sand)}
 #pcr26 .cd-done{font:400 1.6rem/1.2 var(--serif);color:var(--gold);margin:1.4rem 0}
 #pcr26 .hero .btn-row{justify-content:center}
+#pcr26 .live{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem .8rem;max-width:580px;margin:1.3rem auto 0;padding:.85rem 1.1rem;border:1px solid rgba(217,164,65,.6);border-radius:14px;background:rgba(251,246,234,.08);color:var(--ivory);text-decoration:none;line-height:1.4;text-align:center}
+#pcr26 .live:hover{background:rgba(251,246,234,.15)}
+#pcr26 .live-dot{width:11px;height:11px;flex:none;border-radius:50%;background:#e5484d;animation:livepulse 1.8s infinite}
+@keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(229,72,77,.6)}70%{box-shadow:0 0 0 10px rgba(229,72,77,0)}100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}}
+#pcr26 .live-cta{display:inline-flex;align-items:center;gap:.35rem;font-weight:600;color:var(--gold)}
 #pcr26 .scene{display:block;width:100%;max-width:1000px;height:auto;margin:2.2rem auto 0;overflow:visible}
 #pcr26 .sun{animation:rise 3s cubic-bezier(.2,.7,.2,1) both}
 #pcr26 .glow{animation:pulse 6s ease-in-out infinite alternate}
@@ -337,6 +342,11 @@
       <li><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="hero.date">Saturday, November 7, 2026</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="hero.when">6:30 a.m. · Mission Espada</span></li>
     </ul>
+    <a class="live" id="liveLink" href="https://www.youtube.com/@missionconcepcion-sanantonio/featured" target="_blank" rel="noopener">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span><strong data-i18n="live.title">Can't be there in person?</strong> <span data-i18n="live.text">The 12:00 p.m. Closing Mass will be live streamed from the Mission Concepción YouTube channel.</span></span>
+      <span class="live-cta"><span data-i18n="live.cta">Watch the live stream</span><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></span>
+    </a>
     <div id="countdown" class="countdown" role="timer" data-i18n-attr="aria-label:cd.label">
       <div class="cd"><b id="cdD">--</b><span data-i18n="cd.days">days</span></div>
       <div class="cd"><b id="cdH">--</b><span data-i18n="cd.hours">hours</span></div>
@@ -581,6 +591,7 @@ const CONFIG = {
 
   links: {
     camino: "https://caminosanantonio.org/",
+    liveStream: "https://www.youtube.com/@missionconcepcion-sanantonio/featured",
     brochureEn: "https://olghelotes.org/documents/2026/10/Pilgrimage_Trifold_EN.pdf",
     brochureEs: "https://olghelotes.org/documents/2026/10/Pilgrimage_Trifold_ES.pdf",
     rsvpFormEn: "https://docs.google.com/forms/d/1dm5z-XEwOqrWViCGml30PD8seRQEvIDhNrM0rM3Cx04/viewform",
@@ -643,6 +654,7 @@ const MISSIONS = [
 
 const T = {
 en:{
+ "live.title":"Can't be there in person?","live.text":"The 12:00 p.m. Closing Mass will be live streamed from the Mission Concepción YouTube channel.","live.cta":"Watch the live stream","live.short":"Live stream of the Mass","ps.live":"Closing Mass live stream",
  "broch.title":"Pilgrimage brochure","broch.lead":"Our full tri-fold brochure in English and Spanish: program, prayers, reflections and directions.","broch.dl":"Download brochure (PDF)","broch.pageEn":"English side","broch.pageEs":"Spanish side","broch.altEn":"Preview of the English side of the brochure","broch.altEs":"Preview of the Spanish side of the brochure",
  "skip":"Skip to content","brand":"5th Pilgrimage","brand.aria":"5th Pilgrimage of Christ the King, back to top",
  "nav.label":"Main menu","menu":"Menu","nav.video":"Video","vid.eyebrow":"Watch","vid.title":"Pilgrimage Missions 2026","vid.lead":"Get ready to walk with us: a short video about the pilgrimage through the four San Antonio Missions.","vid.aria":"Video: Pilgrimage Missions 2026","vid.fail":"The video is not available right now. Please check back soon.",
@@ -685,6 +697,7 @@ en:{
  "lbl.date":"Date","lbl.start":"Start","lbl.mass":"Closing Mass","lbl.where":"Starting address","ps.mass":"12:00 p.m. · Mission Concepción","ps.route":"The route","ps.getting":"Getting there","ps.provide":"What we provide","ps.bring":"What to bring","ps.contact":"RSVP and contact","ps.rsvp":"Please RSVP / Por favor confirme su asistencia","ps.page":"Online","cal.desc":"5th Pilgrimage of Christ the King through the San Antonio Missions. Walking in Faith."
 },
 es:{
+ "live.title":"¿No puede asistir en persona?","live.text":"La Misa de clausura de las 12:00 p. m. se transmitirá en vivo desde el canal de YouTube de la Misión Concepción.","live.cta":"Ver la transmisión en vivo","live.short":"Transmisión en vivo de la Misa","ps.live":"Transmisión en vivo de la Misa de clausura",
  "broch.title":"Folleto de la peregrinación","broch.lead":"Nuestro folleto tríptico completo en inglés y español: programa, oraciones, reflexiones e indicaciones.","broch.dl":"Descargar folleto (PDF)","broch.pageEn":"Lado en inglés","broch.pageEs":"Lado en español","broch.altEn":"Vista previa del lado en inglés del folleto","broch.altEs":"Vista previa del lado en español del folleto",
  "skip":"Saltar al contenido","brand":"5ta Peregrinación","brand.aria":"5ta Peregrinación de Cristo Rey, volver al inicio",
  "nav.label":"Menú principal","menu":"Menú","nav.video":"Video","vid.eyebrow":"Ver","vid.title":"Peregrinación Misiones 2026","vid.lead":"Prepárese para caminar con nosotros: un breve video sobre la peregrinación por las cuatro misiones de San Antonio.","vid.aria":"Video: Peregrinación Misiones 2026","vid.fail":"El video no está disponible en este momento. Por favor vuelva pronto.",
@@ -771,6 +784,7 @@ function updateTexts(){
   $('#dlBroch').href=LANG==='es'?CONFIG.links.brochureEs:CONFIG.links.brochureEn; $('#brochEn').href=CONFIG.links.brochureEn; $('#brochEs').href=CONFIG.links.brochureEs;
   $('#rsvpLinkEn').href=CONFIG.links.rsvpFormEn; $('#rsvpLinkEs').href=CONFIG.links.rsvpFormEs;
   $('#dlEn').href=CONFIG.links.handoutEn; $('#dlEs').href=CONFIG.links.handoutEs;
+  $('#liveLink').href=CONFIG.links.liveStream;
   const q=$('#qrImg'); if(CONFIG.qrImage){q.src=CONFIG.qrImage;q.alt=tr('qr.alt');q.hidden=false}
 }
 
@@ -827,6 +841,7 @@ function buildStops(){
       <div class="more" id="more-${i}" hidden>
         <a href="${l.google}" target="_blank" rel="noopener">${ic('pin')}<span data-i18n="route.google"></span></a>
         <a href="${l.apple}" target="_blank" rel="noopener">${ic('pin')}<span data-i18n="route.apple"></span></a>
+        ${m.id==='concepcion'?`<a href="${esc(CONFIG.links.liveStream)}" target="_blank" rel="noopener">${ic('play')}<span data-i18n="live.short"></span></a>`:''}
       </div></div></div></li>`;
   }).join('');
   list.addEventListener('click',e=>{ if(e.target.closest('.more a'))return; const c=e.target.closest('.stop-card'); if(c)selectStop(+c.dataset.i,false) });
@@ -965,6 +980,7 @@ function sheetsHTML(mode){
         <div><dt>${t('lbl.start')}</dt><dd>${t('hero.when')}</dd></div>
         <div><dt>${t('lbl.where')}</dt><dd>${esc(CONFIG.startAddress)}</dd></div>
         <div><dt>${t('lbl.mass')}</dt><dd>${t('ps.mass')}</dd></div>
+        <div><dt>${t('ps.live')}</dt><dd>youtube.com/@missionconcepcion-sanantonio</dd></div>
       </dl>
       <h2>${t('ps.route')}</h2><ol>${route}</ol>
       <h2>${t('ps.getting')}</h2><ol><li><strong>${t('step1.t')}.</strong> ${t('step1.d')}</li><li><strong>${t('step2.t')}.</strong> ${t('step2.d')}</li><li><strong>${t('step3.t')}</strong> ${t('step3.d')}</li></ol>
