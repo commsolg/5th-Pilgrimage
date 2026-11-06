@@ -100,11 +100,11 @@
 #pcr26 .cd span{font-size:.95rem;color:var(--sand)}
 #pcr26 .cd-done{font:400 1.6rem/1.2 var(--serif);color:var(--gold);margin:1.4rem 0}
 #pcr26 .hero .btn-row{justify-content:center}
-#pcr26 .live{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem .8rem;max-width:580px;margin:1.3rem auto 0;padding:.85rem 1.1rem;border:1px solid rgba(217,164,65,.6);border-radius:14px;background:rgba(251,246,234,.08);color:var(--ivory);text-decoration:none;line-height:1.4;text-align:center}
-#pcr26 .live:hover{background:rgba(251,246,234,.15)}
-#pcr26 .live-dot{width:11px;height:11px;flex:none;border-radius:50%;background:#e5484d;animation:livepulse 1.8s infinite}
-@keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(229,72,77,.6)}70%{box-shadow:0 0 0 10px rgba(229,72,77,0)}100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}}
-#pcr26 .live-cta{display:inline-flex;align-items:center;gap:.35rem;font-weight:600;color:var(--gold)}
+#pcr26 .live{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.7rem 1rem;max-width:720px;margin:1.6rem auto 0;padding:1.4rem 1.6rem;border:2px solid #fff;border-radius:18px;background:#C8102E;color:#fff;font-size:1.2rem;text-decoration:none;line-height:1.4;text-align:center;box-shadow:0 10px 28px -10px rgba(0,0,0,.55);transition:transform .2s,background .2s}
+#pcr26 .live:hover{background:#A60C25;transform:translateY(-2px)}
+#pcr26 .live-dot{width:16px;height:16px;flex:none;border-radius:50%;background:#fff;animation:livepulse 1.8s infinite}
+@keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 12px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+#pcr26 .live-cta{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.15rem;color:#C8102E;background:#fff;padding:.7rem 1.4rem;border-radius:999px}
 #pcr26 .scene{display:block;width:100%;max-width:1000px;height:auto;margin:2.2rem auto 0;overflow:visible}
 #pcr26 .sun{animation:rise 3s cubic-bezier(.2,.7,.2,1) both}
 #pcr26 .glow{animation:pulse 6s ease-in-out infinite alternate}
@@ -342,7 +342,7 @@
       <li><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="hero.date">Saturday, November 7, 2026</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="hero.when">6:30 a.m. · Mission Espada</span></li>
     </ul>
-    <a class="live" id="liveLink" href="https://www.youtube.com/@missionconcepcion-sanantonio/featured" target="_blank" rel="noopener">
+    <a class="live" id="liveLink" href="https://www.youtube.com/@missionconcepcion-sanantonio/streams" target="_blank" rel="noopener">
       <span class="live-dot" aria-hidden="true"></span>
       <span><strong data-i18n="live.title">Can't be there in person?</strong> <span data-i18n="live.text">The 12:00 p.m. Closing Mass will be live streamed from the Mission Concepción YouTube channel.</span></span>
       <span class="live-cta"><span data-i18n="live.cta">Watch the live stream</span><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></span>
@@ -591,7 +591,7 @@ const CONFIG = {
 
   links: {
     camino: "https://caminosanantonio.org/",
-    liveStream: "https://www.youtube.com/@missionconcepcion-sanantonio/featured",
+    liveStream: "https://www.youtube.com/@missionconcepcion-sanantonio/streams",
     brochureEn: "https://olghelotes.org/documents/2026/10/Pilgrimage_Trifold_EN.pdf",
     brochureEs: "https://olghelotes.org/documents/2026/10/Pilgrimage_Trifold_ES.pdf",
     rsvpFormEn: "https://docs.google.com/forms/d/1dm5z-XEwOqrWViCGml30PD8seRQEvIDhNrM0rM3Cx04/viewform",
